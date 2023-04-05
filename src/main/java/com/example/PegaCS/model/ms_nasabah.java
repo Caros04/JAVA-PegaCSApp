@@ -3,9 +3,13 @@ package com.example.PegaCS.model;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "MS_NASABAH")
 public class ms_nasabah {
+    @Id
     private int CIF;
     private String nama;
     private String tipe;

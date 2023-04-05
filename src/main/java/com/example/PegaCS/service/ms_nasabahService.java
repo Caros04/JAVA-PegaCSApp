@@ -12,6 +12,6 @@ public class ms_nasabahService {
     ms_nasabahRepository nasabahRepo;
 
     public ms_nasabah getNasabahById(int CIF) {
-        return nasabahRepo.findById((long) CIF).get();
+        return nasabahRepo.findByCif(CIF);
     }
 }

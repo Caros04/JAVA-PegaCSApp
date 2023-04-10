@@ -2,32 +2,32 @@ package com.example.PegaCS.model;
 
 import java.util.Objects;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "MS_NASABAH")
-public class ms_nasabah {
+@Table(name = "USER")
+public class user {
     @Id
-    private int CIF;
+    private long CIF;
     private String nama;
     private String tipe;
 
-    public ms_nasabah() {
+    public user() {
     }
 
-    public ms_nasabah(int CIF, String nama, String tipe) {
+    public user(long CIF, String nama, String tipe) {
         this.CIF = CIF;
         this.nama = nama;
         this.tipe = tipe;
     }
 
-    public int getCIF() {
+    public long getCIF() {
         return this.CIF;
     }
 
-    public void setCIF(int CIF) {
+    public void setCIF(long CIF) {
         this.CIF = CIF;
     }
 
@@ -47,17 +47,17 @@ public class ms_nasabah {
         this.tipe = tipe;
     }
 
-    public ms_nasabah CIF(int CIF) {
+    public user CIF(long CIF) {
         setCIF(CIF);
         return this;
     }
 
-    public ms_nasabah nama(String nama) {
+    public user nama(String nama) {
         setNama(nama);
         return this;
     }
 
-    public ms_nasabah tipe(String tipe) {
+    public user tipe(String tipe) {
         setTipe(tipe);
         return this;
     }
@@ -66,11 +66,11 @@ public class ms_nasabah {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof ms_nasabah)) {
+        if (!(o instanceof user)) {
             return false;
         }
-        ms_nasabah ms_nasabah = (ms_nasabah) o;
-        return CIF == ms_nasabah.CIF && Objects.equals(nama, ms_nasabah.nama) && Objects.equals(tipe, ms_nasabah.tipe);
+        user user = (user) o;
+        return CIF == user.CIF && Objects.equals(nama, user.nama) && Objects.equals(tipe, user.tipe);
     }
 
     @Override
